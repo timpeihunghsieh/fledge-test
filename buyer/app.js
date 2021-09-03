@@ -12,6 +12,10 @@ app.get('/trusted-bidding-signals', function(req, res) {
   res.end(JSON.stringify({"trustedkey1": "1", "trustedkey3": "3"}));
 });
 
+app.get('/report-win', function(req, res) {
+  console.log("Received /report-win call");
+});
+
 // Static folder
 app.use(express.static(path.join(__dirname, 'public')));
 

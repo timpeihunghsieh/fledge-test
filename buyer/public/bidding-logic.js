@@ -9,5 +9,7 @@ function generateBid(
 
 function reportWin(
   auctionSignals, perBuyerSignals, sellerSignals, browserSignals) {
-  //sendReportTo("https://somewhere/reportWin?" + encodeURIComponent(JSON.stringify(browserSignals)));
+  console.log(browserSignals.interestGroupOwner + "/report-win");
+
+  sendReportTo(browserSignals.interestGroupOwner + "/report-win");
 }
