@@ -1,10 +1,12 @@
 var express = require('express');
 var app = express();
+const path = require('path');
 
-app.use('/public', express.static('public'));
+// Static folder
+app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/', function(req, res) {
-  res.send('Hello World');
+  res.sendFile('buyer.html', { root: path.join(__dirname, 'public') });
 });
 
 // Start the server
