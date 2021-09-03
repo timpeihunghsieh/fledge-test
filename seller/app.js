@@ -14,6 +14,10 @@ app.get('/trusted-scoring-signals', function(req, res) {
       "https://fledge-buyer-test.ue.r.appspot.com/ad-2.html": "2"}));
 });
 
+app.get('/report-result', function(req, res) {
+  console.log("Received /report-result call");
+});
+
 // Static folder
 app.use(express.static(path.join(__dirname, 'public')));
 
