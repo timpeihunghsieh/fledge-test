@@ -7,6 +7,11 @@ app.use(function(req, res, next) {
   return next();
 });
 
+app.get('/trusted-bidding-signals', function(req, res) {
+  res.setHeader('Content-Type', 'application/json');
+  res.end(JSON.stringify({"trustedkey1": "1", "trustedkey3": "3"}));
+});
+
 // Static folder
 app.use(express.static(path.join(__dirname, 'public')));
 
