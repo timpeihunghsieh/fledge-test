@@ -1,5 +1,28 @@
+<h1>run ad auction</h1>
 <script>
    if (!navigator.runAdAuction) {
-     document.write("seller.html");
+     document.write("your browser doesn't have runAdAuction -- do you need to set some flags?");
    }
+</script>
+<script type=module>
+   if (navigator.runAdAuction) {
+     const ar = await navigator.runAdAuction({
+       seller: 'https://fledge-seller-test.ue.r.appspot.com',
+       decisionLogicUrl: 'https://fledge-seller-test.ue.r.appspot.com/decision-logic.js',
+       trustedScoringSignalsUrl: 'https://fledge-seller-test.ue.r.appspot.com/trusted-scoring.json',
+       interestGroupBuyers: ['https://fledge-buyer-test.ue.r.appspot.com'],
+       auctionSignals: {key: "auction signals"},
+       sellerSignals: {key: "seller signals"},
+       perBuyerSignals: {"https://fledge-buyer-test.ue.r.appspot.com": {key: "tc signals"}},
+     });
+     
+     if (ar === null) {
+       document.write("No turtledove winner");
+     } else {
+       const iframe = document.createElement('iframe');
+       iframe.src = ar;
+       document.body.appendChild(iframe);
+     }
+   }
+     
 </script>
