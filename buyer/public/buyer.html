@@ -1,3 +1,27 @@
 <script>
-   document.write("buyer html");
+   if (!navigator.joinAdInterestGroup) {
+     document.write("your browser doesn't have joinAdInterestGroup -- do you need to set some flags?");
+   } else {
+     navigator.joinAdInterestGroup({
+       owner: "https://fledge-buyer-test.ue.r.appspot.com",
+       name: "fledge-buyer-test-ig",
+       biddingLogicUrl: "https://fledge-buyer-test.ue.r.appspot.com/bidding-logic.js",
+       userBiddingSignals: {key: "user bidding signals"},
+       ads: [
+         {
+           renderUrl: "https://fledge-buyer-test.ue.r.appspot.com/ad-1.html",
+           metadata: {
+             bid: 1
+           },
+         },
+         {
+           renderUrl: "https://fledge-buyer-test.ue.r.appspot.com/ad-2.html",
+           metadata: {
+             bid: 2
+           },
+         },
+       ],
+     }, 10000);
+     document.write("joined interest group");
+   }
 </script>
