@@ -7,6 +7,10 @@ app.get('/', function(req, res) {
   res.send('Hello World');
 });
 
-app.listen(3000, function() {
-  console.log('Listening on localhost:3000');
+// Start the server
+const port = process.env.PORT || 8080;
+app.listen(port, () => {
+  console.log(`App listening on port ${port}`);
 });
+
+module.exports = app;
