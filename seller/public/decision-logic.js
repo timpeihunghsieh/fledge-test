@@ -1,5 +1,7 @@
 function scoreAd(
     adMetadata, bid, auctionConfig, trustedScoringSignals, browserSignals) {
+  console.log("trustedScoringSignals:");
+  console.log(trustedScoringSignals);
   return bid;
 }
 

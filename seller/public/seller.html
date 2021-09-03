@@ -9,7 +9,9 @@
      const ar = await navigator.runAdAuction({
        seller: 'https://fledge-seller-test.ue.r.appspot.com',
        decisionLogicUrl: 'https://fledge-seller-test.ue.r.appspot.com/decision-logic.js',
-       trustedScoringSignalsUrl: 'https://fledge-seller-test.ue.r.appspot.com/trusted-scoring.json',
+
+       // trustedScoringSignalsUrl does not work (perhaps not implemented?)
+       trustedScoringSignalsUrl: 'https://fledge-seller-test.ue.r.appspot.com/trusted-scoring-signals',
        interestGroupBuyers: ['https://fledge-buyer-test.ue.r.appspot.com'],
        auctionSignals: {key: "auction signals"},
        sellerSignals: {key: "seller signals"},
