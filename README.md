@@ -1,13 +1,13 @@
 # Chrome's FLEDGE API Test
-Chrome has proposed [FLEDGE API](https://github.com/WICG/turtledove/blob/main/FLEDGE.md) for ad serving. This repository tests out the FLEDGE API in Chrome Canary by building out a test publisher and a test advertiser. 
+Chrome has proposed [FLEDGE API](https://github.com/WICG/turtledove/blob/main/FLEDGE.md) for ad serving. This repository tests out the FLEDGE API in Chrome Canary by building out a test publisher and a test advertiser.
 
 ## Usage
 
 1. Download [Chrome Canary](https://www.google.com/chrome/canary/)
-2. Start the Chrome Canary with the flags `--enable-features=FledgeInterestGroupAPI,FledgeInterestGroups`. On Mac, you can do this:
-    
+2. Start the Chrome Canary with the flags `--enable-features=AdInterestGroupAPI,InterestGroupStorage,Fledge,FencedFrames`. On Mac, you can do this:
+
 ```
-"/Applications/Google Chrome Canary.app/Contents/MacOS/Google Chrome Canary" --enable-features=FledgeInterestGroupAPI,FledgeInterestGroups
+"/Applications/Google Chrome Canary.app/Contents/MacOS/Google Chrome Canary" --enable-features=AdInterestGroupAPI,InterestGroupStorage,Fledge,FencedFrames
 ```
 
 3. Use Chrome Canary to visit advertiser's page to join interest group.
@@ -15,7 +15,7 @@ Chrome has proposed [FLEDGE API](https://github.com/WICG/turtledove/blob/main/FL
 
 4. Use Chrome Canary to visit publisher's page to run an ad auction to see ad.
     - https://fledge-seller-test.ue.r.appspot.com
-    
+
 ## Example Implementation Details
 ### Publisher Endpoints
 - Homepage
@@ -31,7 +31,7 @@ Chrome has proposed [FLEDGE API](https://github.com/WICG/turtledove/blob/main/FL
 - Report Result URL
     - https://fledge-seller-test.ue.r.appspot.com/report-result
     - Intended to be called by seller's reportResult().
-    
+
 ### Advertiser Endpoints
 - Homepage
     - https://fledge-buyer-test.ue.r.appspot.com
