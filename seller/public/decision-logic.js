@@ -6,7 +6,7 @@ function scoreAd(
 }
 
 function reportResult(auctionConfig, browserSignals) {
-  sendReportTo(auctionConfig.seller + '/report-result?everything');
+  // sendReportTo(auctionConfig.seller + '/report-result?everything');
 
   console.log(auctionConfig.seller + '/report-result?everything');
 
