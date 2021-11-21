@@ -9,7 +9,7 @@ function generateBid(
 
 function reportWin(
   auctionSignals, perBuyerSignals, sellerSignals, browserSignals) {
-  console.log(browserSignals.interestGroupOwner + "/report-win");
-
-  sendReportTo(browserSignals.interestGroupOwner + "/report-win");
+  const buyerReportWinUrl = browserSignals.interestGroupOwner + "/report-win";
+  console.log("Calling buyer's reportWin(). " + buyerReportWinUrl);
+  sendReportTo(buyerReportWinUrl);
 }

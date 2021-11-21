@@ -15,6 +15,7 @@ app.get('/trusted-bidding-signals', function(req, res) {
 
 app.get('/report-win', function(req, res) {
   console.log("Received /report-win call");
+  res.end("");
 });
 
 // Static folder
