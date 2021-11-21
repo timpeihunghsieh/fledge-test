@@ -6,8 +6,7 @@
 </script>
 <script type=module>
    if (navigator.runAdAuction) {
-
-     console.log("runAdAuction");
+     console.log("Running runAdAuction()");
 
      const ar = await navigator.runAdAuction({
        seller: 'https://fledge-seller-test.ue.r.appspot.com',
@@ -24,7 +23,7 @@
      if (ar === null) {
        document.write("No turtledove winner");
      } else {
-       console.log("ar: " + ar);
+       console.log("runAdAuction() return value: " + ar);
        const fencedframe = document.createElement('fencedframe');
        fencedframe.src = ar;
        document.body.appendChild(fencedframe);

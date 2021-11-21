@@ -16,6 +16,7 @@ app.get('/trusted-scoring-signals', function(req, res) {
 
 app.get('/report-result', function(req, res) {
   console.log("Received /report-result call");
+  res.end("");
 });
 
 // Static folder

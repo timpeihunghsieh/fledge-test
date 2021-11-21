@@ -1,14 +1,13 @@
 function scoreAd(
     adMetadata, bid, auctionConfig, trustedScoringSignals, browserSignals) {
-  console.log("trustedScoringSignals:");
-  console.log(trustedScoringSignals);
+  console.log("Calling seller's scoreAd(). trustedScoringSignals: " + trustedScoringSignals);
   return bid;
 }
 
 function reportResult(auctionConfig, browserSignals) {
-  // sendReportTo(auctionConfig.seller + '/report-result?everything');
-
-  console.log(auctionConfig.seller + '/report-result?everything');
+  const sellerReportUrl = auctionConfig.seller + '/report-result?everything';
+  console.log("Calling seller's reportResult(). " + sellerReportUrl);
+  sendReportTo(sellerReportUrl);
 
   return {
     'success': true,
