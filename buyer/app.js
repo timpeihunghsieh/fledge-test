@@ -4,6 +4,7 @@ const path = require('path');
 
 app.use(function(req, res, next) {
   res.setHeader("X-Allow-FLEDGE", "true");
+  res.setHeader("Supports-Loading-Mode", "fenced-frame");
   return next();
 });
 
