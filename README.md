@@ -48,6 +48,7 @@ Chrome has proposed [FLEDGE API](https://github.com/WICG/turtledove/blob/main/FL
 
 ### Additional Notes
 - All resources that the FLEDGE API fetches need to return `X-Allow-FLEDGE: true`. For example, Biding Logic, Trusted Bidding Signal, ...
+- The ad creatives that the FencedFrame fetch need to return `Supports-Loading-Mode: fenced-frame`. Otherwise you will get errors such as "XXX is blockedXXX refused to connect. ERR_BLOCKED_BY_RESPONSE"
 
 ## Credit
 - Jeff Kaufman's post: https://www.jefftk.com/p/testing-the-fledge-prototype
