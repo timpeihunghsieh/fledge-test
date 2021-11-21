@@ -26,6 +26,10 @@
        console.log("runAdAuction() return value: " + ar);
        const fencedframe = document.createElement('fencedframe');
        fencedframe.src = ar;
+
+       // The following does not have any effects
+       fencedframe.setAttribute("width", "400");
+       fencedframe.setAttribute("height", "600");
        document.body.appendChild(fencedframe);
      }
    }

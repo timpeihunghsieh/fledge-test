@@ -1,1 +1,17 @@
 <h1>Tim AD 1</h1>
+<div id="ff"></div>
+<script>
+if (!navigator.adAuctionComponents) {
+  document.write("your browser doesn't have runAdAuction -- do you need to set some flags?");
+} else {
+  const components = navigator.adAuctionComponents(/*numComponents*/3);
+  console.log("adAuctionComponents() return value: " + components);
+
+  for (const component of components) {
+    const fencedframe = document.createElement('fencedframe');
+    fencedframe.src = component;
+    document.getElementById("ff").appendChild(fencedframe);
+  }
+}
+
+</script>
