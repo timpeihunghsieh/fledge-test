@@ -11,6 +11,11 @@ function generateBid(
   const adComponent1 = interestGroup.adComponents[0];
   const adComponent2 = interestGroup.adComponents[1];
 
+  //const reportOnLossDebug = browserSignals.interestGroupOwner + "/report-loss-debug?somedata";
+  //debug.sendReportOnLoss(reportOnLossDebug);
+  //const reportOnWinDebug = browserSignals.interestGroupOwner + "/report-win-debug?somemoredata";
+  //debug.sendReportOnWin(reportOnWinDebug);
+
   return {'ad': 'example',
           'bid': ad.metadata.bid,
           'render': ad.renderUrl,

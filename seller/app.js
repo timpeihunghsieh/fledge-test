@@ -19,6 +19,16 @@ app.get('/report-result', function(req, res) {
   res.end("");
 });
 
+app.get('/report-win-debug', function(req, res) {
+  console.log("Received /report-win-debug call");
+  res.end("");
+});
+
+app.get('/report-loss-debug', function(req, res) {
+  console.log("Received /report-loss-debug call");
+  res.end("");
+});
+
 // Static folder
 app.use(express.static(path.join(__dirname, 'public')));
 

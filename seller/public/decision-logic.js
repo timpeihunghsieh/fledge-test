@@ -4,7 +4,13 @@ function log(label, o) {
 
 function scoreAd(
     adMetadata, bid, auctionConfig, trustedScoringSignals, browserSignals) {
-  log("scoreAd", { adMetadata, bid, auctionConfig, trustedScoringSignals, browserSignals })
+  log("scoreAd", { adMetadata, bid, auctionConfig, trustedScoringSignals, browserSignals });
+
+  //const sellerReportLossDebugUrl = auctionConfig.seller + '/report-loss-debug?everything';
+  //debug.sendReportOnLoss(sellerReportLossDebugUrl);
+  //const sellerReportWinDebugUrl = auctionConfig.seller + '/report-win-debug?everything';
+  //debug.sendReportOnWin(sellerReportWinDebugUrl);
+
   return bid;
 }
 
