@@ -10,8 +10,8 @@ app.use(function(req, res, next) {
 app.get('/trusted-scoring-signals', function(req, res) {
   res.setHeader('Content-Type', 'application/json');
   res.end(JSON.stringify({
-      "https://fledge-buyer-test.ue.r.appspot.com/ad-1.html": "1",
-      "https://fledge-buyer-test.ue.r.appspot.com/ad-2.html": "2"}));
+      "https://fledge-buyer-test.ue.r.appspot.com/ad-1.html": {"ad1_key": 1},
+      "https://fledge-buyer-test.ue.r.appspot.com/ad-2.html": {"ad2_key": "2"}}));
 });
 
 app.get('/report-result', function(req, res) {

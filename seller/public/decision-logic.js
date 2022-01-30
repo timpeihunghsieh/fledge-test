@@ -1,10 +1,16 @@
+function log(label, o) {
+    console.log(label, JSON.stringify(o, " ", " "))
+}
+
 function scoreAd(
     adMetadata, bid, auctionConfig, trustedScoringSignals, browserSignals) {
-  console.log("Calling seller's scoreAd(). trustedScoringSignals: " + trustedScoringSignals);
+  log("scoreAd", { adMetadata, bid, auctionConfig, trustedScoringSignals, browserSignals })
   return bid;
 }
 
 function reportResult(auctionConfig, browserSignals) {
+  log("reportResult", { auctionConfig, browserSignals })
+
   const sellerReportUrl = auctionConfig.seller + '/report-result?everything';
   console.log("Calling seller's reportResult(). " + sellerReportUrl);
   sendReportTo(sellerReportUrl);
